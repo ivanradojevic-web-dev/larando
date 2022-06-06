@@ -15,12 +15,9 @@
     </head>
     <body class="font-sans antialiased bg-gray-100">
         <main class="container mx-auto rounded-xl bg-white h-full my-16 max-w-3xl px-4 py-8">         
-@php
-$foo = auth()->check();
-@endphp
             <!-- Page Content -->
             <div id="app">
-                <app :foo="{{ $foo }}"></app>
+                <app></app>
             </div>
         </main>
     </body>
