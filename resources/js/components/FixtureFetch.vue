@@ -6,7 +6,7 @@
         </div>
         <div v-for="( {team, given_goals, id, played}, index ) in round" :key="id" >
             <div class="flex pt-1" :class="[(index + 1) % 2  === 0 ? ['border-b pb-1'] : '']">
-                <div class="h-6 w-1/2 flex space-x-4 items-center md:mlml-8">
+                <div class="h-6 w-1/2 flex space-x-4 items-center md:ml-8">
                     <div class="flex items-center">
                         <img class="h-4 w-4" :src="team.photo_1">
                         <img class="ml-2 h-4 w-4" :src="team.photo_2">
