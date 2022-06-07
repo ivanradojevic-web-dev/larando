@@ -17,7 +17,7 @@ Route::get('/', function () {
 	return redirect()->route('home', ['foo' => 'home']);
 });
 
-Route::get('/dashboard', function () {
+Route::get('/admin', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 

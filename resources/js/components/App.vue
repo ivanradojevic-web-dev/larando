@@ -13,7 +13,7 @@
             <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/fixtures">partite</router-link>
             <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/results">risultati</router-link>
             <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/matches">tutto</router-link>
-            <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/fixtures/edit">modificare</router-link>
+            <router-link v-show="authStore.isAuth" class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/fixtures/edit">modificare</router-link>
         </div>
 
         <router-view v-slot="{ Component }">
@@ -26,7 +26,10 @@
 
 <script setup>
 
-const props = defineProps(['foo'])
+import { useAuthStore } from '../stores/auth'
+
+const authStore = useAuthStore()
+authStore.getAuthCheck()
 
 </script>
 

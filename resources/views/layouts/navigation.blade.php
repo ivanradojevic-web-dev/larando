@@ -5,8 +5,8 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                    <a href="{{ route('home', ['foo' => 'home']) }}">
+                        <img class="h-16 w-16" src="https://media-exp1.licdn.com/dms/image/C4E0BAQFWhdy3n2w4cg/company-logo_200_200/0/1636372933895?e=1661385600&v=beta&t=SGvSiNoGmRuM026IuaC-ARceq7-WKXKW4SC5b3PomWk">
                     </a>
                 </div>
 

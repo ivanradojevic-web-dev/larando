@@ -9,4 +9,3 @@
 import FixtureFetch from '../components/FixtureFetch.vue'
 
 </script>
-

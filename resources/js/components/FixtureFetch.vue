@@ -4,7 +4,7 @@
         <div class="w-full bg-gray-300 uppercase font-semibold rounded-lg text-xs pl-2 py-1">
             Calcio {{ index }}
         </div>
-        <div v-for="( {team, given_goals, id}, index ) in round" :key="id" >
+        <div v-for="( {team, given_goals, id, played}, index ) in round" :key="id" >
             <div class="flex pt-1" :class="[(index + 1) % 2  === 0 ? ['border-b pb-1'] : '']">
                 <div class="h-6 w-1/2 flex space-x-4 items-center ml-8">
                     <div class="flex items-center">
@@ -14,6 +14,7 @@
                     <div class="text-sm text-gray-600">{{ team.name }}</div>
                 </div>
                 <div v-if="given_goals" class="w-1/4 h-6 text-sm font-semibold flex flex-1 items-center">{{ given_goals }}</div>
+                <div v-else-if="played" class="w-1/4 h-6 text-sm font-semibold flex flex-1 items-center">{{ given_goals }}</div>
                 <div v-else class="w-1/4 h-6 flex flex-1 items-center">-</div>
 
                 <div v-show="$route.name === 'fixtures-edit'" class="w-1/4 flex items-center justify-end space-x-8 mr-4">
