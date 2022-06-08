@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Standing from "@/views/Standing.vue";
-import Fixtures from "@/views/Fixtures.vue";
-import Results from "@/views/Results.vue";
-import AllMatches from "@/views/AllMAtches.vue";
-import EditFixtures from "@/views/EditFixtures.vue";
+import Standing from "../views/Standing.vue";
+import Fixtures from "../views/Fixtures.vue";
+import Results from "../views/Results.vue";
+import AllMatches from "../views/AllMAtches.vue";
+import EditFixtures from "../views/EditFixtures.vue";
 
 const routes = [
   {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\FixtureResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class TeamResource extends JsonResource
@@ -26,6 +27,7 @@ class TeamResource extends JsonResource
             'goal_difference' => $this->goal_difference,
             'photo_1' => $this->photo_1,
             'photo_2' => $this->photo_2,
+            'matches' => FixtureResource::collection($this->whenLoaded('fixtures')),
         ];
 
             

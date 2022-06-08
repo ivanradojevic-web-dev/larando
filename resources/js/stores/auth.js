@@ -8,12 +8,12 @@ export const useAuthStore = defineStore('auth', {
   },
   actions: {
     async getAuthCheck() {
-        try {
-            const response = await axios.get('/auth')
-            this.isAuth = response.data.auth
-        } catch (error) {
-            console.error(error);
-        }
+      try {
+        const response = await axios.get('/auth')
+        this.isAuth = response.data.auth
+      } catch (error) {
+        console.error(error);
+      }
     }
   },
 })

@@ -17,4 +17,13 @@ class TeamController extends Controller
 
         return TeamResource::collection($teams);
     }
+
+    public function show($slug)
+    {
+        $team = Team::with('fixtures')
+        	->where('slug', $slug)
+        	->first();
+
+        return new TeamResource($team);
+    }
 }
