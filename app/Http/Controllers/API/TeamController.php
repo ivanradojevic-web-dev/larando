@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TeamResource;
+use App\Models\Fixture;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,15 @@ class TeamController extends Controller
         	->where('slug', $slug)
         	->first();
 
-        return new TeamResource($team);
+        $teamFixtures = $team->fixtures->map(function ($item) {
+            return Fixture::with('team')
+                ->where('round', $item->round)
+                ->where('match_number', $item->match_number)
+                ->get();
+        });
+
+        return response()->json([
+            'fixtures' => $teamFixtures,
+        ]);
     }
 }

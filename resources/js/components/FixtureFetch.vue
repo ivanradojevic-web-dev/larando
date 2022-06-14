@@ -11,7 +11,11 @@
                         <img class="h-4 w-4" :src="team.photo_1">
                         <img class="ml-2 h-4 w-4" :src="team.photo_2">
                     </div>
-                    <div class="text-xs md:text-sm line-clamp-1 text-gray-600">{{ team.name }}</div>
+                    <div class="text-xs md:text-sm line-clamp-1 text-gray-600">
+                        <router-link :to="'/trinitti-rancco/team/' + team.slug" class="hover:underline">
+                            {{ team.name }}
+                        </router-link>
+                    </div>
                 </div>
                 <div v-if="given_goals" class="w-1/4 ml-2 h-6 text-sm font-semibold flex flex-1 items-center">{{ given_goals }}</div>
                 <div v-else-if="played" class="w-1/4 ml-2 h-6 text-sm font-semibold flex flex-1 items-center">{{ given_goals }}</div>

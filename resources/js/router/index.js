@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Standing from "../views/Standing.vue";
+import TeamShow from "../views/TeamShow.vue";
 import Fixtures from "../views/Fixtures.vue";
 import Results from "../views/Results.vue";
 import AllMatches from "../views/AllMAtches.vue";
@@ -10,6 +11,11 @@ const routes = [
     path: "/trinitti-rancco/home",
     name: "standing",
     component: Standing,
+  },
+  {
+    path: "/trinitti-rancco/team/:slug",
+    name: "team",
+    component: TeamShow,
   },
   {
     path: "/trinitti-rancco/fixtures",
