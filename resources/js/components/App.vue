@@ -10,9 +10,8 @@
         
         <div class="my-6 flex space-x-4 overflow-x-auto nav-scroll">
             <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/home">classifica</router-link>
-            <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/fixtures">partite</router-link>
+            <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/cup">coppa</router-link>
             <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/results">risultati</router-link>
-            <router-link class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/matches">tutto</router-link>
             <router-link v-show="authStore.isAuth" class="bg-gray-300 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl" to="/trinitti-rancco/fixtures/edit">modificare</router-link>
             <button v-show="$route.name === 'team'" @click="$router.go(-1)" class="bg-blue-400 px-2 py-1.5 text-white text-xs font-semibold uppercase rounded-xl">
                 back
