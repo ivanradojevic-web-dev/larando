@@ -21,10 +21,10 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Team::insert([
             [
-                'name' => 'Devlasi',
-                'slug' => Str::slug('Devlasi', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPK8H3K2M-74ea4320898d-72',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01LUEK3BJ9-f1e926917fbe-72',
+                'name' => 'Sick Leave on Beta',
+                'slug' => Str::slug('Sick Leave on Beta', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UHF43BNDS-6873a3a474ee-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM25NMHS4-3ed4973f2f40-512',
             ],
             [
                 'name' => 'Fantazija',
@@ -33,43 +33,62 @@ class DatabaseSeeder extends Seeder
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UHGKS36KG-36dc263a400a-512',
             ],
             [
-                'name' => 'Garlandini',
-                'slug' => Str::slug('Garlandini', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UH6FVGSSD-7b15df775008-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM41J1F63-88bbd84a202a-512',
-            ],
-            [
-                'name' => 'IspodPsi',
+                'name' => 'Miki i Djordje',
                 'slug' => Str::slug('IspodPsi', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UHEJX8L3A-385bf6191838-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U0393VC044W-4bec5fa33d97-512',
             ],
             [
-                'name' => 'Ja vragolan i Moj Deda',
+                'name' => 'Jovan Vera',
+                'slug' => Str::slug('Devlasi', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPK8H3K2M-74ea4320898d-72',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01LUEK3BJ9-f1e926917fbe-72',
+            ],
+            [
+                'name' => 'Dacha Acke',
+                'slug' => Str::slug('Garlandini', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UH6FVGSSD-7b15df775008-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM41J1F63-88bbd84a202a-512',
+            ],
+            [
+                'name' => 'Bojana Igor',
                 'slug' => Str::slug('Ja vragolan i Moj Deda', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UMSD5HDMY-96f640c97760-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM55CU6NL-46a072502909-512',
             ],
             [
-                'name' => 'Kad Jaganjci Utihnu',
+                'name' => 'Biba Dusan',
                 'slug' => Str::slug('Kad Jaganjci Utihnu', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UDJ8535F0-ed9b28c71aae-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U023MHS6R8B-848c68f13787-512',
             ],
+            
             [
-                'name' => 'Sick Leave on Beta',
-                'slug' => Str::slug('Sick Leave on Beta', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UHF43BNDS-6873a3a474ee-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM25NMHS4-3ed4973f2f40-512',
-            ],
-            [
-                'name' => 'Under Pressure Girls',
+                'name' => 'Zoran Nikolina',
                 'slug' => Str::slug('Under Pressure Girls', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UGMT7NEDP-4d6522f2e4f7-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UGUSYDZNC-58f59e2e44e5-512',
             ],
             [
-                'name' => 'Katana',
+                'name' => 'Boki Ninja',
+                'slug' => Str::slug('Katana', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPL83QAUU-9c23f3e0801b-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U038W1JC8CX-44867dffbbf7-512',
+            ],
+            [
+                'name' => 'Team 10',
+                'slug' => Str::slug('Kad Jaganjci Utihnu', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UDJ8535F0-ed9b28c71aae-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U023MHS6R8B-848c68f13787-512',
+            ],
+            [
+                'name' => 'Milijn Ivan',
+                'slug' => Str::slug('Under Pressure Girls', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UGMT7NEDP-4d6522f2e4f7-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UGUSYDZNC-58f59e2e44e5-512',
+            ],
+            [
+                'name' => 'Teodora Tamara',
                 'slug' => Str::slug('Katana', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPL83QAUU-9c23f3e0801b-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U038W1JC8CX-44867dffbbf7-512',

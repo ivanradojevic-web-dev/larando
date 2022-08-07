@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Fixture extends Model
 {
     use HasFactory;
+
+    protected $table = 'fixtures_season_2';
     
-    public $timestamps = false;
+    //public $timestamps = false;
 
     protected $guarded = [];
 

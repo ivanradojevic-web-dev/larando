@@ -26,6 +26,8 @@ class TeamResource extends JsonResource
             'given_goals' => $this->given_goals,
             'goals_conceded' => $this->goals_conceded,
             'goal_difference' => $this->goal_difference,
+            'set_wins' => $this->set_wins,
+            'set_losses' => $this->set_losses,
             'photo_1' => $this->photo_1,
             'photo_2' => $this->photo_2,
             'matches' => FixtureResource::collection($this->whenLoaded('fixtures')),

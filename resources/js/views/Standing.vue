@@ -5,15 +5,15 @@
 				
 			</div>
 			<div class="w-1/2 h-9 grid grid-cols-6 gap-x-2 border-b text-sm items-center">
-				<div class="col-span-1">MP</div>
-				<div class="col-span-1 hidden md:block">W</div>
-				<div class="col-span-1 hidden md:block">L</div>
-				<div class="col-span-2 md:col-span-1">GG</div>
-				<div class="col-span-2 md:col-span-1">GD</div>
-				<div class="col-span-1">P</div>
+				<div class="col-span-1 text-gray-600">MP</div>
+				<div class="col-span-1 hidden md:block text-gray-600">W / L</div>
+				<div class="hidden md:block col-span-1 text-gray-600">GG</div>
+				<div class="col-span-1 text-gray-600">GD</div>
+				<div class="col-span-2 md:col-span-1 text-gray-600">SW / Sl</div>
+				<div class="col-span-1 text-gray-600">P</div>
 			</div>
 		</div>
-		<div v-for="({ photo_1, photo_2, name, matches_played, wins, losses, given_goals, goals_conceded, goal_difference, points, slug }, index ) in teams" class="flex">
+		<div v-for="({ photo_1, photo_2, name, matches_played, wins, losses, given_goals, goals_conceded, goal_difference, points, slug, set_wins, set_losses }, index ) in teams" class="flex">
 			<div class="h-9 w-1/2 flex border-b space-x-4 items-center">
 				<div v-if="index + 1  === 1" class="bg-blue-500 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
 				<div v-if="index + 1  > 1 && index + 1 < 5" class="bg-red-800 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
@@ -26,15 +26,16 @@
 					<router-link :to="'/trinitti-rancco/team/' + slug" class="hover:underline">
 						{{ name }} 
 					</router-link>
-					<img v-if="index + 1  === 1" class="w-3 h-3 ml-1" src="/images/trophy.png" alt="Trophy icon">
+					<img v-if="name === 'Sick Leave on Beta'" class="w-3 h-3 ml-1" src="/images/trophy.png" alt="Trophy icon">
+					<img v-if="name === 'Fantazija'" class="w-3 h-3 ml-1" src="/images/medal.png" alt="Medal icon">
 				</div>
 			</div>
 			<div class="w-1/2 h-9 grid grid-cols-6 gap-x-2 border-b items-center text-sm">
-				<div class="col-span-1">{{ matches_played }}</div>
-				<div class="col-span-1 hidden md:block">{{ wins }}</div>
-				<div class="col-span-1 hidden md:block">{{ losses }}</div>
-				<div class="col-span-2 md:col-span-1">{{ given_goals }}:{{ goals_conceded }}</div>
-				<div class="col-span-2 md:col-span-1">{{ goal_difference }}</div>
+				<div class="col-span-1 text-gray-600">{{ matches_played }}</div>
+				<div class="col-span-1 hidden md:block text-gray-600">{{ wins }} / {{ losses }}</div>
+				<div class="col-span-2 hidden md:block md:col-span-1 text-gray-600">{{ given_goals }}:{{ goals_conceded }}</div>
+				<div class="col-span-1 text-gray-600">{{ goal_difference }}</div>
+				<div class="col-span-2 md:col-span-1 text-gray-600">{{ set_wins }} / {{ set_losses }}</div>
 				<div class="col-span-1 font-semibold">{{ points }}</div>
 			</div>
 		</div>
@@ -43,10 +44,10 @@
 				<div class="w-3 h-3 bg-blue-500 rounded "></div>
 				<div class="text-xs text-gray-600">Vincitore di Grande Coppa di Fare il Culo e un partecipante alla Coppa delle Coppe</div>
 			</div>
-			<div class="flex items-center space-x-4 mt-1">
+			<!-- <div class="flex items-center space-x-4 mt-1">
 				<div class="w-3 h-3 bg-red-800 rounded "></div>
 				<div class="text-xs text-gray-600">Partecipanti alla Coppa delle Coppe</div>
-			</div>
+			</div> -->
 		</div>
 	</div>		
 </template>

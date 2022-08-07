@@ -9,13 +9,11 @@ class Team extends Model
 {
     use HasFactory;
 
+    protected $table = 'teams_season_2';
+
     public $timestamps = false;
 
     protected $guarded = [];
-
-    protected $casts = [
-    	'date' => 'date',
-	];
 
 	public function fixtures()
     {

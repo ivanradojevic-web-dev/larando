@@ -4,7 +4,7 @@
         <div class="w-full bg-gray-300 uppercase font-semibold rounded-lg text-xs pl-2 py-1">
             Calcio {{ index }}
         </div>
-        <div v-for="( {team, given_goals, id, played}, index ) in round" :key="id" >
+        <div v-for="( {team, set_wins, given_goals, id, played}, index ) in round" :key="id" >
             <div class="flex pt-1" :class="[(index + 1) % 2  === 0 ? ['border-b pb-1'] : '']">
                 <div class="h-6 w-1/2 flex space-x-4 items-center md:ml-8">
                     <div class="flex items-center">
@@ -17,12 +17,22 @@
                         </router-link>
                     </div>
                 </div>
-                <div v-if="given_goals" class="w-1/4 ml-2 h-6 text-sm font-semibold flex flex-1 items-center">{{ given_goals }}</div>
-                <div v-else-if="played" class="w-1/4 ml-2 h-6 text-sm font-semibold flex flex-1 items-center">{{ given_goals }}</div>
+                
+                <div v-if="played" class="w-1/4 ml-2 h-6 text-sm font-semibold flex flex-1 items-center">
+                    {{ set_wins }} 
+                    <span class="ml-6 text-gray-400">{{ given_goals }}</span>
+                </div>
                 <div v-else class="w-1/4 h-6 ml-2 flex flex-1 items-center">-</div>
 
                 <div v-show="$route.name === 'fixtures-edit'" class="w-1/4 flex items-center justify-end space-x-8 mr-4">
                     <input type="number" v-model="matches[id]" class="hidden w-10 h-6 text-sm border text-center rounded-lg appearance-none">
+
+                    <select v-model="sets[id]" class="hidden w-10 h-6 text-sm border text-center rounded-lg">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+
                     <button v-show="(index + 1) % 2 !== 0" @click="editFixtures(id)" class="ok-button hidden" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="fill-blue-500 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -60,6 +70,7 @@
 
     const fixtures = ref(null)
     const matches = ref([])
+    const sets = ref([])
     
     onMounted(() => {
         getFixtures()
@@ -87,10 +98,14 @@
                         id_2: (id+1),
                         team_1_goals: matches.value[id],
                         team_2_goals: matches.value[id+1],
+                        team_1_sets: parseInt(sets.value[id]),
+                        team_2_sets: parseInt(sets.value[id+1]),
                     }
                 });
                 matches.value[id] = '';
                 matches.value[id+1] = '';
+                sets.value[id] = '';
+                sets.value[id+1] = '';
                 closeEdit(id + 1);
                 getFixtures()
             } catch (error) {
@@ -105,6 +120,9 @@
         document.querySelectorAll('input')[i - 1].classList.remove('hidden')
         document.querySelectorAll('input')[i].classList.remove('hidden')
 
+        document.querySelectorAll('select')[i - 1].classList.remove('hidden')
+        document.querySelectorAll('select')[i].classList.remove('hidden')
+
         document.querySelectorAll('.ok-button')[i - 1].classList.remove('hidden')
 
         document.querySelectorAll('.clear-button')[i].classList.remove('hidden')
@@ -115,6 +133,9 @@
     function closeEdit(i) {
         document.querySelectorAll('input')[i - 2].classList.add('hidden')
         document.querySelectorAll('input')[i - 1].classList.add('hidden')
+
+        document.querySelectorAll('select')[i - 2].classList.add('hidden')
+        document.querySelectorAll('select')[i - 1].classList.add('hidden')
         
         document.querySelectorAll('.ok-button')[i - 2].classList.add('hidden')
        
