@@ -1,5 +1,26 @@
 <template>
 	<div>
+		<div class="flex items-center justify-between mb-6">
+			<h2 class="text-lg font-semibold">{{ teamShow.name }}</h2>
+			<div class="flex items-center">
+		        <img class="h-8 w-8" :src="teamShow.photo_1">
+		        <img class="ml-2 h-8 w-8" :src="teamShow.photo_2">
+		    </div>
+		</div>
+
+		<div class="flex items-center mb-6">
+			<h2 class="text-lg uppercase text-gray-400 font-semibold mr-8">Forma</h2>
+			<div v-for="fixture in teamShow.fixtures">
+				<div v-show="fixture.played" class="flex flex-col items-center h-12 mr-1">
+			        <div class="h-3 w-6" :class="fixture.set_wins > 1 ? 'bg-green-500' : 'bg-transparent'"></div>
+			        <div class="h-3 w-6" :class="fixture.set_wins >= 1 ? 'bg-green-500' : 'bg-transparent'"></div>
+			        <hr>
+			        <div class="h-3 w-6" :class="fixture.set_losses >= 1 ? 'bg-red-500' : 'bg-transparent'"></div>
+			        <div class="h-3 w-6" :class="fixture.set_losses > 1 ? 'bg-red-500' : 'bg-transparent'"></div>
+		    	</div>
+		    </div>
+		</div>
+
 		<div v-for="round in teamFixtures">
 		    <div class="w-full bg-gray-300 uppercase font-semibold rounded-lg text-xs pl-2 py-1">
 		        Calcio {{ round[0].round }}
@@ -31,16 +52,18 @@ import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router';
 
 	const route = useRoute(); 
+	const teamShow = ref([])
     const teamFixtures = ref(null)
     const slug = route.params.slug;
 
     onMounted(() => {
-        getTeamFixtures()
+        getTeamFixtures();
     })
 
     async function getTeamFixtures() {
         try {
             const response = await axios.get('/api/teams/' + slug);
+            teamShow.value = response.data.team
             teamFixtures.value = response.data.fixtures
         } catch (error) {
             console.error(error);
