@@ -3,8 +3,8 @@
 		<div class="flex items-center justify-between mb-6">
 			<h2 class="text-lg font-semibold">{{ teamShow.name }}</h2>
 			<div class="flex items-center">
-		        <img class="h-8 w-8" :src="teamShow.photo_1">
-		        <img class="ml-2 h-8 w-8" :src="teamShow.photo_2">
+		        <v-lazy-image class="h-8 w-8" :src="teamShow.photo_1" />
+		        <v-lazy-image class="ml-2 h-8 w-8" :src="teamShow.photo_2" />
 		    </div>
 		</div>
 
@@ -29,7 +29,7 @@
 		        <div class="flex py-1">
 		            <div class="h-6 w-1/2 flex space-x-4 items-center md:ml-8">
 		                <div class="flex items-center">
-		                    <img class="h-4 w-4" :src="team.photo_1">
+		                    <img class="ml-2 h-4 w-4" :src="team.photo_1">
 		                    <img class="ml-2 h-4 w-4" :src="team.photo_2">
 		                </div>
 		                <div class="text-xs md:text-sm line-clamp-1 text-gray-600">{{ team.name }}</div>
@@ -50,6 +50,7 @@
 
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router';
+import VLazyImage from "v-lazy-image";
 
 	const route = useRoute(); 
 	const teamShow = ref([])
