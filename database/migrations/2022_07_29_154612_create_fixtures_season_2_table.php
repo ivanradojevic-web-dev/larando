@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('round');
             $table->integer('match_number');
-            $table->foreignId('team_id')->constrained();
+            $table->foreignId('team_id')->constrained('teams_season_2');
             $table->integer('points')->nullable();
             $table->integer('given_goals')->nullable();
             $table->integer('goals_conceded')->nullable();

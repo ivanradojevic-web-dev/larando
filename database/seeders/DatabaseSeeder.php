@@ -36,312 +36,63 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Miki i Djordje',
                 'slug' => Str::slug('IspodPsi', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UHEJX8L3A-385bf6191838-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U0393VC044W-4bec5fa33d97-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U03HSTV9W2W-8095172021ee-512',
             ],
             [
-                'name' => 'Jovan Vera',
+                'name' => 'Jovana Vera',
                 'slug' => Str::slug('Devlasi', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPK8H3K2M-74ea4320898d-72',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01LUEK3BJ9-f1e926917fbe-72',
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-ULFNCRLQ5-e14e1d6c9777-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01CR72ANKZ-a3d73429000d-512',
             ],
             [
                 'name' => 'Dacha Acke',
                 'slug' => Str::slug('Garlandini', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UH6FVGSSD-7b15df775008-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM41J1F63-88bbd84a202a-512',
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UGMT7NEDP-4d6522f2e4f7-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U023MHS6R8B-848c68f13787-512',
             ],
             [
                 'name' => 'Bojana Igor',
                 'slug' => Str::slug('Ja vragolan i Moj Deda', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UMSD5HDMY-96f640c97760-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UM55CU6NL-46a072502909-512',
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-U038W1JC8CX-44867dffbbf7-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UDJ8535F0-ed9b28c71aae-512',
             ],
             [
                 'name' => 'Biba Dusan',
                 'slug' => Str::slug('Kad Jaganjci Utihnu', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UDJ8535F0-ed9b28c71aae-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U023MHS6R8B-848c68f13787-512',
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPK8H3K2M-74ea4320898d-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01G3CT62CE-11da1b8c3f59-512',
             ],
             
             [
                 'name' => 'Zoran Nikolina',
-                'slug' => Str::slug('Under Pressure Girls', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UGMT7NEDP-4d6522f2e4f7-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UGUSYDZNC-58f59e2e44e5-512',
+                'slug' => Str::slug('yoran nifew', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-U03HCAGPR0F-30e68092695b-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01JSP0JTL1-0f1a12246144-512',
             ],
             [
                 'name' => 'Boki Ninja',
-                'slug' => Str::slug('Katana', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPL83QAUU-9c23f3e0801b-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U038W1JC8CX-44867dffbbf7-512',
+                'slug' => Str::slug('boki niiac', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UM41J1F63-88bbd84a202a-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UPL83QAUU-9c23f3e0801b-512',
             ],
             [
-                'name' => 'Team 10',
-                'slug' => Str::slug('Kad Jaganjci Utihnu', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UDJ8535F0-ed9b28c71aae-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U023MHS6R8B-848c68f13787-512',
+                'name' => 'Daki Ivana',
+                'slug' => Str::slug('Team 10', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UM55CU6NL-46a072502909-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UH6FVGSSD-7b15df775008-512',
             ],
             [
                 'name' => 'Milijn Ivan',
-                'slug' => Str::slug('Under Pressure Girls', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UGMT7NEDP-4d6522f2e4f7-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UGUSYDZNC-58f59e2e44e5-512',
+                'slug' => Str::slug('Miljan Ivan', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UMSD5HDMY-96f640c97760-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01LUEK3BJ9-f1e926917fbe-512',
             ],
             [
                 'name' => 'Teodora Tamara',
-                'slug' => Str::slug('Katana', '-'),
-                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UPL83QAUU-9c23f3e0801b-512',
-                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U038W1JC8CX-44867dffbbf7-512',
+                'slug' => Str::slug('Teo tam', '-'),
+                'photo_1'=>'https://ca.slack-edge.com/T643W8FME-U039417ARFG-257c3dfe1552-512',
+                'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UJ3K1HMH8-19f35a6cafa7-512',
             ],
-        ]);
-
-        \App\Models\Fixture::insert([
-            [
-                'round' => 1,
-                'match_number' => 1,
-                'team_id'=> 5,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 1,
-                'team_id'=> 9,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 2,
-                'team_id'=> 2,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 2,
-                'team_id'=> 7,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 3,
-                'team_id'=> 1,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 3,
-                'team_id'=> 6,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 4,
-                'team_id'=> 8,
-            ],
-            [
-                'round' => 1,
-                'match_number' => 4,
-                'team_id'=> 4,
-            ],
-
-            [
-                'round' => 2,
-                'match_number' => 1,
-                'team_id'=> 5,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 1,
-                'team_id'=> 3,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 2,
-                'team_id'=> 2,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 2,
-                'team_id'=> 9,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 3,
-                'team_id'=> 1,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 3,
-                'team_id'=> 7,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 4,
-                'team_id'=> 8,
-            ],
-            [
-                'round' => 2,
-                'match_number' => 4,
-                'team_id'=> 6,
-            ],
-
-            [
-                'round' => 3,
-                'match_number' => 1,
-                'team_id'=> 2,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 1,
-                'team_id'=> 3,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 2,
-                'team_id'=> 1,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 2,
-                'team_id'=> 9,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 3,
-                'team_id'=> 8,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 3,
-                'team_id'=> 7,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 4,
-                'team_id'=> 4,
-            ],
-            [
-                'round' => 3,
-                'match_number' => 4,
-                'team_id'=> 6,
-            ],
-
-            [
-                'round' => 4,
-                'match_number' => 1,
-                'team_id'=> 5,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 1,
-                'team_id'=> 2,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 2,
-                'team_id'=> 1,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 2,
-                'team_id'=> 3,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 3,
-                'team_id'=> 8,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 3,
-                'team_id'=> 9,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 4,
-                'team_id'=> 4,
-            ],
-            [
-                'round' => 4,
-                'match_number' => 4,
-                'team_id'=> 7,
-            ],
-
-            [
-                'round' => 5,
-                'match_number' => 1,
-                'team_id'=> 5,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 1,
-                'team_id'=> 1,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 2,
-                'team_id'=> 8,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 2,
-                'team_id'=> 3,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 3,
-                'team_id'=> 4,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 3,
-                'team_id'=> 9,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 4,
-                'team_id'=> 6,
-            ],
-            [
-                'round' => 5,
-                'match_number' => 4,
-                'team_id'=> 7,
-            ],
-
-            [
-                'round' => 6,
-                'match_number' => 1,
-                'team_id'=> 5,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 1,
-                'team_id'=> 8,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 2,
-                'team_id'=> 2,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 2,
-                'team_id'=> 1,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 3,
-                'team_id'=> 4,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 3,
-                'team_id'=> 3,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 4,
-                'team_id'=> 6,
-            ],
-            [
-                'round' => 6,
-                'match_number' => 4,
-                'team_id'=> 9,
-            ],
-
         ]);
     }
 }
