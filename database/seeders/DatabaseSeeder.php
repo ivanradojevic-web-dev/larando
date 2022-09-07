@@ -65,13 +65,13 @@ class DatabaseSeeder extends Seeder
             
             [
                 'name' => 'Zoran Nikolina',
-                'slug' => Str::slug('yoran nifew', '-'),
+                'slug' => Str::slug('Zoran Nikolina', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-U03HCAGPR0F-30e68092695b-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01JSP0JTL1-0f1a12246144-512',
             ],
             [
                 'name' => 'Boki Ninja',
-                'slug' => Str::slug('boki niiac', '-'),
+                'slug' => Str::slug('Boki Ninja', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UM41J1F63-88bbd84a202a-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UPL83QAUU-9c23f3e0801b-512',
             ],
@@ -82,14 +82,14 @@ class DatabaseSeeder extends Seeder
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UH6FVGSSD-7b15df775008-512',
             ],
             [
-                'name' => 'Milijn Ivan',
-                'slug' => Str::slug('Miljan Ivan', '-'),
+                'name' => 'Milan Ivan',
+                'slug' => Str::slug('Milan Ivan', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-UMSD5HDMY-96f640c97760-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-U01LUEK3BJ9-f1e926917fbe-512',
             ],
             [
                 'name' => 'Teodora Tamara',
-                'slug' => Str::slug('Teo tam', '-'),
+                'slug' => Str::slug('Teodora tamara', '-'),
                 'photo_1'=>'https://ca.slack-edge.com/T643W8FME-U039417ARFG-257c3dfe1552-512',
                 'photo_2'=>'https://ca.slack-edge.com/T643W8FME-UJ3K1HMH8-19f35a6cafa7-512',
             ],

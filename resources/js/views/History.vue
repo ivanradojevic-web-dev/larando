@@ -16,7 +16,7 @@ onMounted(() => {
 
 async function getTeams() {
 	try {
-		const response = await axios.get('/api/teams');
+		const response = await axios.get('/api/history');
 		teams.value = response.data.data
 	} catch (error) {
 		console.error(error);

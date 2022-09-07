@@ -1,10 +1,16 @@
 <template>
     <div>
-        <div class="flex items center border-b pb-6">
-            <img class="rounded-xl h-20 w-20" src="https://media-exp1.licdn.com/dms/image/C4E0BAQFWhdy3n2w4cg/company-logo_200_200/0/1636372933895?e=1661385600&v=beta&t=SGvSiNoGmRuM026IuaC-ARceq7-WKXKW4SC5b3PomWk">
-            <div class="flex flex-col justify-between pl-6">
-                <h1 class="font-semibold text-lg lg:mt-2">TRINITTI RANCCO GRANDE COPPA DI FARE IL CULO</h1>
-                <span class="mb-2 text-gray-600">La Stagione 2 - Autunno 2022</span>
+        <div class="">
+            <div class="flex items center ">
+                <img class="rounded-xl h-20 w-20" src="https://media-exp1.licdn.com/dms/image/C4E0BAQFWhdy3n2w4cg/company-logo_200_200/0/1636372933895?e=1670457600&v=beta&t=Hhpny_3-QMtqXnIZhnG16lY66_8x-iGucqpm2lNSzA0">
+                <div class="flex flex-col justify-between pl-6">
+                    <h1 class="font-semibold text-lg lg:mt-2">TRINITTI RANCCO GRANDE COPPA DI FARE IL CULO</h1>
+                    <span class="mb-2 text-gray-600">La Stagione 2 - Autunno 2022</span>
+                </div>
+            </div>
+            <div class="flex justify-center lg:justify-end space-x-4 border-b py-2">
+                <div :class="$route.name !== 'history' ? 'text-red-600' : 'text-gray-600'" class="px-2 py-1.5 text-xs font-semibold uppercase hover:text-red-600 cursor-pointer">attuale</div>
+                <div :class="$route.name === 'history' ? 'text-red-600' : 'text-gray-600'" class="px-2 py-1.5 text-xs font-semibold uppercase hover:text-red-600 cursor-pointer">storico</div>
             </div>
         </div>
         

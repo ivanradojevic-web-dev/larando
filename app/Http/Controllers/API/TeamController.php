@@ -7,12 +7,22 @@ use App\Http\Resources\TeamResource;
 use App\Models\Fixture;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeamController extends Controller
 {
     public function index()
     {
         $teams = Team::orderByDesc('points')
+        	->orderByDesc('goal_difference')
+        	->get();
+
+        return TeamResource::collection($teams);
+    }
+
+    public function history()
+    {
+        $teams = DB::table('teams')->orderByDesc('points')
         	->orderByDesc('goal_difference')
         	->get();
 

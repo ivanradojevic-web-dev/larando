@@ -47,28 +47,26 @@
 </template>
 
 <script setup>
-
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router';
 import VLazyImage from "v-lazy-image";
 
-	const route = useRoute(); 
-	const teamShow = ref([])
-    const teamFixtures = ref(null)
-    const slug = route.params.slug;
+const route = useRoute(); 
+const teamShow = ref([])
+const teamFixtures = ref(null)
+const slug = route.params.slug;
 
-    onMounted(() => {
-        getTeamFixtures();
-    })
+onMounted(() => {
+	getTeamFixtures();
+})
 
-    async function getTeamFixtures() {
-        try {
-            const response = await axios.get('/api/teams/' + slug);
-            teamShow.value = response.data.team
-            teamFixtures.value = response.data.fixtures
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
+async function getTeamFixtures() {
+	try {
+		const response = await axios.get('/api/teams/' + slug);
+		teamShow.value = response.data.team
+		teamFixtures.value = response.data.fixtures
+	} catch (error) {
+		console.error(error);
+	}
+}
 </script>

@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/teams', [TeamController::class, 'index']);
 Route::get('/teams/{slug}', [TeamController::class, 'show']);
+//Route::get('/history', [TeamController::class, 'history']);
 
 Route::get('/fixtures', [FixtureController::class, 'index']);
 Route::post('/fixtures/edit', [FixtureController::class, 'edit']);
