@@ -15,9 +15,10 @@
 		</div>
 		<div v-for="({ photo_1, photo_2, name, matches_played, wins, losses, given_goals, goals_conceded, goal_difference, points, slug, set_wins, set_losses }, index ) in teams" class="flex">
 			<div class="h-9 w-1/2 flex border-b space-x-4 items-center">
-				<div v-if="index + 1  === 1" class="bg-blue-500 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
-				<div v-if="index + 1  > 1 && index + 1 < 5" class="bg-red-800 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
-				<div v-if="index + 1  > 4" class="bg-transparent h-5 w-5 flex items-center justify-center font-semibold rounded text-gray-600 text-xs">{{ index + 1 }}.</div>
+				<div v-if="index + 1  === 1" class="bg-blue-600 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
+				<div v-if="index + 1  > 1 && index + 1 < 4" class="bg-blue-500 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
+				<div v-if="index + 1  > 3 && index + 1 < 10" class="bg-red-500 h-5 w-5 flex items-center justify-center font-semibold rounded text-white text-xs">{{ index + 1 }}.</div>
+				<div v-if="index + 1  > 9" class="bg-transparent h-5 w-5 flex items-center justify-center font-semibold rounded text-gray-600 text-xs">{{ index + 1 }}.</div>
 				<div class="hidden md:flex items-center">
 					<img class="h-5 w-5" :src="photo_1">
 					<img class="ml-2 h-5 w-5" :src="photo_2">
