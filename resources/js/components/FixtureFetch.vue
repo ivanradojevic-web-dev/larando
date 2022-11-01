@@ -1,6 +1,7 @@
 <template>
     <div>
-    <div v-for="(round, index) in fixtures" class="mb-4">
+    <TransitionGroup name="list" tag="div">
+    <div v-for="(round, index) in fixtures" :key="index" class="mb-4">
         <div class="w-full bg-gray-300 uppercase font-semibold rounded-lg text-xs pl-2 py-1">
             Calcio {{ index }}
         </div>
@@ -59,6 +60,7 @@
             </div>
         </div>
     </div>
+    </TransitionGroup>
     </div>
 </template>
 
@@ -144,4 +146,18 @@
     }
 
 </script>
+
+<style scoped>
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 1.0s ease-out;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+</style>
 
