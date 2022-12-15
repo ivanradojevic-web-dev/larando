@@ -28,7 +28,7 @@
 						<router-link :to="'/trinitti-rancco/team/' + slug" class="hover:underline">
 							{{ name }} 
 						</router-link>
-						<img v-if="name === '2Sick2Furious'" class="w-3 h-3 ml-1" src="/images/trophy.png" alt="Trophy icon">
+						<img v-if="name === '2Sick2Furious' || name === 'Fantazija 2'" class="w-3 h-3 ml-1" src="/images/trophy.png" alt="Trophy icon">
 						<img v-if="name === 'Fantazija 2'" class="w-3 h-3 ml-1" src="/images/medal.png" alt="Medal icon">
 					</div>
 				</div>
